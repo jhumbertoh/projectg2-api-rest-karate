@@ -10,5 +10,10 @@ class ExamplesTest {
     Karate testAll() {
         return Karate.run().relativeTo(getClass());
     }
+
+    @Karate.Test
+    Karate testIssues(){
+        return new Karate().feature("classpath:examples/issues/issues.feature");
+    }
     
 }
